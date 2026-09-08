@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.streamlit/
+*.log
+.DS_Store
+*.pyo
+*.pyd

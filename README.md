@@ -1,60 +1,106 @@
-# Sales Intelligence Dashboard
+# 📊 Sales Intelligence Dashboard
 
-A professional Streamlit sales analytics dashboard designed to explore revenue, profit, customer behavior, and operational trends from a single modern business intelligence workspace.
+A polished Streamlit-based sales analytics project built to explore revenue, profitability, customer behavior, and operational trends from a modern business intelligence workspace.
 
-## Overview
+## ✨ Overview
 
-This project provides a complete analytics experience for sales data, including:
+This dashboard helps business teams quickly answer questions such as:
 
-- KPI cards for revenue, profit, profit margin, and top-performing segments
-- Sales analysis across product, region, and customer dimensions
-- Profitability analysis with trend and contribution views
-- Data overview for schema validation, data health, and record quality
-- Upload and validation workflow for custom CSV datasets
-- Multi-page navigation and dark enterprise dashboard styling
+- Which regions and products generate the most revenue?
+- What is the profit margin across different time periods?
+- Which customers contribute the most sales?
+- Are there quality issues or missing values in the active dataset?
 
-## Tech Stack
+The app includes a dark premium UI, multi-page navigation, KPI summaries, interactive charts, and an upload workflow for custom CSV files.
+
+## 🚀 Included Features
+
+- KPI cards for sales, profit, margin, and leader metrics
+- Sales trend and segmentation analysis by region, product, and customer
+- Profitability dashboard with margin and performance drivers
+- Data overview page for schema inspection and quality checks
+- Upload and validation workflow for custom sales CSV files
+- Responsive dark layout with enterprise-style styling
+
+## 🧰 Tech Stack
 
 - Python
 - Streamlit
 - Pandas
 - Plotly
+- GitHub for version control and project sharing
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 streamlit_project/
 ├── app.py
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 ├── Data/
+│   └── sales_dataset.csv
 ├── pages/
+│   ├── 0_Home.py
+│   ├── 1_Data_Overview.py
+│   ├── 2_Sales_Analysis.py
+│   ├── 3_Profit_Analysis.py
+│   └── 4_Upload_Data.py
 ├── utils/
+│   ├── components.py
+│   ├── data_loader.py
+│   ├── export.py
+│   ├── filters.py
+│   ├── navigation.py
+│   └── ui.py
 ├── tests/
 └── .streamlit/
 ```
 
-## Run Locally
+## 📊 Default Dataset
+
+The project uses the dataset located at:
+
+- `Data/sales_dataset.csv`
+
+This file contains order-level sales data with fields such as:
+
+- `Order_ID`
+- `Order_Date`
+- `Region`
+- `Product`
+- `Customer`
+- `Sales`
+- `Profit`
+- `Category`
+- `State`
+- `Ship_Mode`
+- `Payment_Method`
+- `Order_Status`
+
+## ▶️ Run the App Locally
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Data Requirements
+Then open the local Streamlit URL shown in the terminal, usually:
 
-The app expects a sales dataset with relevant columns such as:
+```text
+http://localhost:8501
+```
 
-- Date / Order Date
-- Sales
-- Profit
-- Region
-- Product
-- Customer
+## 🧪 Data Validation Workflow
 
-If a custom CSV is uploaded, the app validates the required columns before activating it.
+Users can upload a CSV file from the dashboard and the app will:
 
-## Dashboard Pages
+1. Check the required fields
+2. Clean invalid or duplicate records
+3. Preview the cleaned dataset
+4. Activate the uploaded dataset across all dashboard pages
+
+## 🧭 Dashboard Pages
 
 - Home
 - Data Overview
@@ -62,6 +108,10 @@ If a custom CSV is uploaded, the app validates the required columns before activ
 - Profit Analysis
 - Upload Data
 
-## Notes
+## 🔗 GitHub Repository
 
-This project is intended for business reporting and dashboard-style exploration, with a focus on clean UI, operational readability, and reliable data inspection.
+This project is maintained as a GitHub repository and can be pushed or cloned using the standard Git workflow.
+
+## 📝 Notes
+
+This project is designed for business reporting, sales monitoring, and data exploration with a clean enterprise look and reliable analytics workflow.
